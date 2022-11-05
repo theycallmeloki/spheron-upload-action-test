@@ -9,7 +9,9 @@ jobs:
         id: hello
         uses: theycallmeloki/spheron-upload-action@v0.1
         with:
-          who-to-greet: 'Mona the Octocat'
+          spheron-api-key: ${{ SPHERON_API_KEY }}
+          spheron-project-name: ${{ SPHERON_PROJECT_NAME }}
+          spheron-organization-id: ${{SPHERON_ORGANIZATION_ID }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
