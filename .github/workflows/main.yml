@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Spheron upload action step
         id: upload
-        uses: theycallmeloki/spheron-upload-action@v0.22
+        uses: theycallmeloki/spheron-upload-action@v0.23
         with:
           spheron-api-key: ${{ secrets.SPHERON_API_KEY }}
           spheron-project-name: ${{ secrets.SPHERON_PROJECT_NAME }}
