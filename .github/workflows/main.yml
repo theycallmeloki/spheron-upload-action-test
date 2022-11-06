@@ -3,15 +3,15 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to test upload action on spheron
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: theycallmeloki/spheron-upload-action@v0.2
+      - name: Spheron upload action step
+        id: upload
+        uses: theycallmeloki/spheron-upload-action@v0.21
         with:
           spheron-api-key: ${{ SPHERON_API_KEY }}
           spheron-project-name: ${{ SPHERON_PROJECT_NAME }}
           spheron-organization-id: ${{SPHERON_ORGANIZATION_ID }}
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the url of the deployment
+        run: echo "The url was ${{ steps.upload.outputs.site }}"
