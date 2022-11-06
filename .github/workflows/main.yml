@@ -9,9 +9,9 @@ jobs:
         id: upload
         uses: theycallmeloki/spheron-upload-action@v0.21
         with:
-          spheron-api-key: ${{ SPHERON_API_KEY }}
-          spheron-project-name: ${{ SPHERON_PROJECT_NAME }}
-          spheron-organization-id: ${{SPHERON_ORGANIZATION_ID }}
+          spheron-api-key: ${{ secrets.SPHERON_API_KEY }}
+          spheron-project-name: ${{ secrets.SPHERON_PROJECT_NAME }}
+          spheron-organization-id: ${{ secrets.SPHERON_ORGANIZATION_ID }}
       # Use the output from the `hello` step
       - name: Get the url of the deployment
         run: echo "The url was ${{ steps.upload.outputs.site }}"
