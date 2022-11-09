@@ -22,7 +22,7 @@ jobs:
           npm run build --if-present
       - name: Spheron upload action step
         id: upload
-        uses: theycallmeloki/spheron-upload-action@v0.28
+        uses: theycallmeloki/spheron-upload-action@v0.29
         with:
           spheron-api-key: ${{ secrets.SPHERON_API_KEY }}
           spheron-project-name: ${{ secrets.SPHERON_PROJECT_NAME }}
