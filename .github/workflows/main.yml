@@ -1,17 +1,19 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  upload_spheron_job:
     runs-on: ubuntu-latest
     name: A job to test upload action on spheron
     steps:
       - name: Spheron upload action step
         id: upload
-        uses: theycallmeloki/spheron-upload-action@v0.23
+        uses: theycallmeloki/spheron-upload-action@v0.24
         with:
           spheron-api-key: ${{ secrets.SPHERON_API_KEY }}
           spheron-project-name: ${{ secrets.SPHERON_PROJECT_NAME }}
           spheron-organization-id: ${{ secrets.SPHERON_ORGANIZATION_ID }}
+          spheron-upload-folder: "build"
+          spheron-protocol: "ipfs-pinata"
       # Use the output from the `hello` step
       - name: Get the url of the deployment
         run: echo "The url was ${{ steps.upload.outputs.site }}"
