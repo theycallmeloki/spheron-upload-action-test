@@ -6,6 +6,9 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
+    defaults:
+      run:
+        working-directory: ./app
     name: A job to test upload action on spheron
     steps:
       - uses: actions/checkout@v2
