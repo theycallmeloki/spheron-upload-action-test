@@ -4,7 +4,7 @@
 
 2. Be sure to setup a `SPHERON_API_KEY` environment variable in your project's actions, you can collect one from Spheron Console. Profile > User Settings > Tokens > Create Token
 
-3. Be sure to setup a `SPHERON_PROJECT_NAME` environment variable in your project's actions, you could ideally your project's repo name for the same
+3. Be sure to setup a `SPHERON_PROJECT_NAME` environment variable in your project's actions, you could ideally use your project's repo name for the same
 
 4. ???
 
