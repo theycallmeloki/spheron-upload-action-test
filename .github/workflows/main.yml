@@ -8,7 +8,7 @@ jobs:
         node-version: [16.x]
     defaults:
       run:
-        working-directory: ${{ env.GITHUB_WORKSPACE }}
+        working-directory: ${{ github.workspace }}
     name: A job to test upload action on spheron
     steps:
       - uses: actions/checkout@v2
