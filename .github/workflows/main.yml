@@ -30,5 +30,8 @@ jobs:
           spheron-upload-folder: "build"
           spheron-protocol: "ipfs-pinata"
       # Use the output from the `hello` step
-      - name: Get the url of the deployment
-        run: echo "The url was ${{ steps.upload.outputs.site }}"
+      # - name: Get the url of the deployment
+      #   run: echo "${{ steps.upload.outputs.site }}"
+      - name: Run tmate
+        uses: mxschmitt/action-tmate@v2
+        run: echo "${{ steps.upload.outputs.site }}"
