@@ -34,4 +34,3 @@ jobs:
       #   run: echo "${{ steps.upload.outputs.site }}"
       - name: Run tmate
         uses: mxschmitt/action-tmate@v2
-        run: echo "${{ steps.upload.outputs.site }}"
