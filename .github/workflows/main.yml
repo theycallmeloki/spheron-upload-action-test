@@ -31,5 +31,5 @@ jobs:
           spheron-protocol: "ipfs-pinata"
       # Use the output from the `hello` step
       - name: Get the url of the deployment
-        run: echo "{{project-name}}-${{ steps.upload.outputs.site }}"
+        run: echo "**spheron-project-name**${{ steps.upload.outputs.site }}"
       
