@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Spheron <code>Upload</code> action test
+          Spheron <code>Upload</code> action test 2
         </p>
         <a
           className="App-link"
